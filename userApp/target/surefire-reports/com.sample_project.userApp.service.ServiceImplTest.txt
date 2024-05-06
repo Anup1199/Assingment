@@ -1,0 +1,57 @@
+-------------------------------------------------------------------------------
+Test set: com.sample_project.userApp.service.ServiceImplTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.100 s <<< FAILURE! -- in com.sample_project.userApp.service.ServiceImplTest
+com.sample_project.userApp.service.ServiceImplTest.testAddUser -- Time elapsed: 0.086 s <<< FAILURE!
+Argument(s) are different! Wanted:
+userRepository.save(
+    User(id=0, name=name, userName=userName, email=email, address=Address(id=0, street=street, city=city, geo=Geo(id=0, longitude=longitude, latitude=latitude, address=null), user=null), phone=phone, company=Company(id=0, name=name, location=location, user=null))
+);
+-> at com.sample_project.userApp.service.ServiceImplTest.testAddUser(ServiceImplTest.java:121)
+Actual invocations have different arguments:
+userRepository.save(
+    User(id=0, name=name, userName=userName, email=email, address=Address(id=0, street=street, city=city, geo=Geo(id=0, longitude=longitude, latitude=latitude, address=null), user=User(id=0, name=name, userName=userName, email=email, address=null, phone=phone, company=Company(id=0, name=name, location=location, user=null))), phone=phone, company=Company(id=0, name=name, location=location, user=User(id=0, name=name, userName=userName, email=email, address=Address(id=0, street=street, city=city, geo=Geo(id=0, longitude=longitude, latitude=latitude, address=null), user=null), phone=phone, company=null)))
+);
+-> at com.sample_project.userApp.service.ServiceImpl.addUser(ServiceImpl.java:51)
+
+	at com.sample_project.userApp.service.ServiceImplTest.testAddUser(ServiceImplTest.java:121)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.sample_project.userApp.service.ServiceImplTest.testGetUserById_UserRepositoryReturnsAbsent -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: User(id=0, name=name, userName=userName, email=email, address=Address(id=0, street=street, city=city, geo=Geo(id=0, longitude=longitude, latitude=latitude, address=null), user=null), phone=phone, company=Company(id=0, name=name, location=location, user=null))
+ but was: null
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at com.sample_project.userApp.service.ServiceImplTest.testGetUserById_UserRepositoryReturnsAbsent(ServiceImplTest.java:94)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.sample_project.userApp.service.ServiceImplTest.testUpdateUser -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: User(id=0, name=name, userName=userName, email=email, address=Address(id=0, street=street, city=city, geo=Geo(id=0, longitude=longitude, latitude=latitude, address=null), user=null), phone=phone, company=Company(id=0, name=name, location=location, user=null))
+ but was: null
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at com.sample_project.userApp.service.ServiceImplTest.testUpdateUser(ServiceImplTest.java:169)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.sample_project.userApp.service.ServiceImplTest.testDeleteUser -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: "result"
+ but was: "Successfully deleted user with ID = 0"
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at com.sample_project.userApp.service.ServiceImplTest.testDeleteUser(ServiceImplTest.java:133)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

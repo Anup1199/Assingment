@@ -1,0 +1,20 @@
+
+
+server:
+  port: 9001
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+  application:
+    name: USER-SERVICE
+  datasource:
+    password: password
+    username: root
+    url: jdbc:mysql://localhost:3306/Task?createDatabaseIfNotExist=true&useSSL=true

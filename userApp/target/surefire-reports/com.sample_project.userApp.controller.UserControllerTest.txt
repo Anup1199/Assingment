@@ -1,0 +1,64 @@
+-------------------------------------------------------------------------------
+Test set: com.sample_project.userApp.controller.UserControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.644 s <<< FAILURE! -- in com.sample_project.userApp.controller.UserControllerTest
+com.sample_project.userApp.controller.UserControllerTest.testAddUser -- Time elapsed: 0.069 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: 200
+ but was: 400
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at com.sample_project.userApp.controller.UserControllerTest.testAddUser(UserControllerTest.java:108)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.sample_project.userApp.controller.UserControllerTest.testUpdateUser -- Time elapsed: 0.006 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: 200
+ but was: 400
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at com.sample_project.userApp.controller.UserControllerTest.testUpdateUser(UserControllerTest.java:149)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.sample_project.userApp.controller.UserControllerTest.testUserById -- Time elapsed: 0.008 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: "expectedResponse"
+ but was: "{"id":0,"name":"Name","userName":"Username","email":"Email","address":{"id":0,"street":"street","city":"city","geo":{"id":0,"longitude":"longitude","latitude":"latitude","address":null},"user":null},"phone":"phone","company":{"id":0,"name":"name","location":"location","user":null}}"
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at com.sample_project.userApp.controller.UserControllerTest.testUserById(UserControllerTest.java:87)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.sample_project.userApp.controller.UserControllerTest.testDeleteUser -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: 200
+ but was: 202
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at com.sample_project.userApp.controller.UserControllerTest.testDeleteUser(UserControllerTest.java:123)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.sample_project.userApp.controller.UserControllerTest.testShowAllUsers -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: "expectedResponse"
+ but was: "[{"id":0,"name":"Name","userName":"Username","email":"Email","address":{"id":0,"street":"street","city":"city","geo":{"id":0,"longitude":"longitude","latitude":"latitude","address":null},"user":null},"phone":"phone","company":{"id":0,"name":"name","location":"location","user":null}}]"
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at com.sample_project.userApp.controller.UserControllerTest.testShowAllUsers(UserControllerTest.java:53)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
